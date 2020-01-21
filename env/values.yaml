@@ -15,9 +15,11 @@ expose:
   config:
     domain: cjxd-3.cdx-dev.beescloud.com
     exposer: Ingress
-    http: "true"
-    tlsacme: "false"
+    http: "false"
+    tlsSecretName: tls-cjxd-3-cdx-dev-beescloud-com-p
+    tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+  production: true
 jenkins:
   Servers:
     Global: {}
